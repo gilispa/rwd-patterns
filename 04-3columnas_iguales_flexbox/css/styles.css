@@ -38,4 +38,13 @@ h1 {
     text-transform: uppercase;
 }
 
-/** CODIGO AQUI **/
+@media (min-width: 768px) {
+    .contenedor {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .entrada-blog {
+        flex: 1;
+    }
+}
