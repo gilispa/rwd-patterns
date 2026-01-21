@@ -47,4 +47,23 @@ p {
     text-transform: uppercase;
 }
 
-/** CODIGO AQUI **/
+@media (min-width: 768px) {
+    .contenedor {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .contenido-principal {
+        flex-basis: calc(60% - 1rem)
+    }
+
+    .sidebar1 {
+        flex-basis: calc(20% - 1rem);
+        order: -1;
+    }
+
+    .sidebar2 {
+        flex-basis: calc(20% - 1rem)
+    }
+
+}
