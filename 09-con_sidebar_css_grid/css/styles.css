@@ -47,4 +47,19 @@ p {
     text-transform: uppercase;
 }
 
-/** CODIGO AQUI **/
+@media (min-width: 768px) {
+    .contenedor {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        grid-template-areas: "main side";
+        gap: 1rem;
+    }
+
+    article {
+        grid-area: main;
+    }
+
+    aside {
+        grid-area: side;
+    }
+}
