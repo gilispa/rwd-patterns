@@ -47,6 +47,45 @@ p {
     text-transform: uppercase;
 }
 
+@media (min-width: 768px) {
+    .contenedor {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "main main"
+            "sidebar1 sidebar2";
+        gap: 2rem;
+    }
 
+    .contenido-principal {
+        grid-area: main;
+    }
 
-/** CODIGO AQUI **/
+    .sidebar1 {
+        grid-area: sidebar1;
+    }
+
+    .sidebar2 {
+        grid-area: sidebar2;
+    }
+}
+
+@media (min-width: 1200px) {
+    .contenedor {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+            "main sidebar1 sidebar2";
+    }
+
+    .contenido-principal {
+        grid-area: main;
+    }
+
+    .sidebar1 {
+        grid-area: sidebar1;
+    }
+
+    .sidebar2 {
+        grid-area: sidebar2;
+    }
+}
