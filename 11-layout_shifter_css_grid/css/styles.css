@@ -47,5 +47,62 @@ p {
     text-transform: uppercase;
 }
 
+.contenedor {
+    display: grid;
+    grid-template-areas: "content"
+        "sidebar";
+}
 
-/** CODIGO AQUI **/
+.sidebar {
+    grid-area: sidebar;
+}
+
+.main {
+    grid-area: content;
+}
+
+@media (min-width: 768px) {
+    .contenedor {
+        display: grid;
+        grid-template-areas: "content"
+            "sidebar";
+    }
+
+
+    .sidebar {
+        grid-area: sidebar;
+    }
+
+    .main {
+        grid-area: content;
+        display: grid;
+        grid-template-areas: "content1 content2";
+        gap: 2rem;
+    }
+
+    .content1 {
+        grid-area: content1;
+    }
+
+    .content2 {
+        grid-area: content2;
+    }
+
+
+}
+
+@media (min-width: 1200px) {
+    .contenedor {
+        grid-template-columns: 3fr 1fr;
+        grid-template-areas: "content sidebar";
+        gap: 2rem;
+    }
+
+    .main {
+        grid-area: content;
+    }
+
+    .sidebar {
+        grid-area: sidebar;
+    }
+}

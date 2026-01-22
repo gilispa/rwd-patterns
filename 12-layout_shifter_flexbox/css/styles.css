@@ -32,19 +32,44 @@ p {
 }
 
 .contenedor {
-    max-width: 1200px;
-    width: 95%;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
-.entrada-blog a {
-    display: inline-block;
-    background-color: #2196F3;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-weight: bold;
-    text-transform: uppercase;
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
-/** CODIGO AQUI **/
+.sidebar {
+    order: 1;
+}
+
+@media (min-width: 768px) {
+    main {
+        flex-direction: row;
+    }
+
+    .content1,
+    .content2 {
+        flex: 1;
+    }
+}
+
+@media (min-width: 1200px) {
+    .contenedor {
+        flex-direction: row;
+    }
+
+    main {
+        flex: 3;
+        order: 0;
+    }
+
+    .sidebar {
+        flex: 1;
+        order: 1;
+    }
+}
